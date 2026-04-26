@@ -1,4 +1,4 @@
-name: Claude Code Warmup
+name: Claude Code Warmup Personal
 
 on:
   schedule:
@@ -15,7 +15,7 @@ jobs:
 
       - name: Ping Claude to anchor 5-hour window
         env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_OAUTH_TOKEN }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_OAUTH_TOKEN_PERSONAL }}
         run: |
           mkdir -p ~/.claude
           echo '{"hasCompletedOnboarding":true}' > ~/.claude.json
